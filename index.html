@@ -185,16 +185,18 @@
             text-decoration: none;
         }
 
-        #buttons-container a:hover {
-            background-color: rgb(59, 143, 59);
-        }
-
         #telegram #buttons-container a {
             background-color: dodgerblue;
         }
 
-        #telegram #buttons-container a:hover {
-            background-color: rgb(22, 95, 168);
+        @media (min-width: 992px) {
+            #buttons-container a:hover {
+                background-color: rgb(59, 143, 59);
+            }
+
+            #telegram #buttons-container a:hover {
+                background-color: rgb(22, 95, 168);
+            }
         }
 
         #join {
