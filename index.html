@@ -80,6 +80,19 @@
 
         #header-content {
             width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 60%;
+        }
+
+        #header-content img {
+            flex: 1;
+            height: 40%;
+            width: 100%;
+            margin-bottom: 20px;
+            object-fit: contain;
         }
 
         #header-content h1,
@@ -108,6 +121,25 @@
             #header-content h1 {
                 font-size: 28px;
             }
+        }
+
+        @media (max-width: 783px) {
+            #header-image {
+                height: 80vh;
+            }
+
+            #header-content img {
+                flex: 1;
+                height: 80%;
+                width: 100%;
+                margin-bottom: 20px;
+                object-fit: contain;
+            }
+
+            #header-content p {
+                font-size: 16px;
+                margin: 0;
+            }   
         }
 
         #site-content {
@@ -224,9 +256,51 @@
             color: orange;
         }
 
+        #logos-partners {
+            margin-top: 64px;
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #logos-partners img {
+            margin: 32px;
+        }
+
+        @media (max-width: 991px) {
+            #logos-partners {
+                margin-top: 64px;
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                margin: 0 auto;
+                justify-content: space-between;
+            }
+            #logos-partners img {
+                object-fit: contain;
+                margin-bottom: 0;
+                margin-top: 64px;
+            }
+        }
+
         .navbar-light .navbar-nav .nav-link:focus,
         .navbar-light .navbar-nav .nav-link:hover {
             color: orange;
+        }
+
+        .branding-text {
+            margin-left: 8px;
+            color: orange;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 341px) {
+            .branding-text {
+                font-size: 12px;
+            }
         }
 
     </style>
@@ -236,8 +310,8 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <nav class="navbar navbar-light bg-light">
                 <a class="navbar-brand" href="#">
-                    <!-- <img src="logo.svg" width="30" height="30" alt="" loading="lazy"> -->
-                    <span style="color: orange; font-weight: bold;">#protensaoDE_VDD</span>
+                    <img src="branding-128.png" width="45" height="45" alt="protensaoDE_VDD Branding" loading="lazy">
+                    <span class="branding-text">#protensaoDE_VDD</span>
                 </a>
             </nav>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -263,7 +337,8 @@
 
         <div id="header-image">
             <div id="header-content">
-                <h1>#protensaoDE_VDD</h1>
+                <!-- <h1>#protensaoDE_VDD</h1> -->
+                <img src="logo-vert-nomargin.png" alt="protensaoDE_VDD Logo">
                 <p>O <b style="font-size: 120%;">melhor</b> ambiente virtual para construção de ideias em concreto protendido.</p>
                 <p class="growMargin">Sem mensalidades, nem associações. Gratuito. Para sempre.</p>
             </div>
@@ -313,6 +388,9 @@
         <section id="partners">
             <h1>Apoiadores</h1>
             <p>Quem colabora com o nosso crescimento</p>
+            <div id="logos-partners">
+                <img src="ccp.png" alt="Centro de Consultoria em Protensão">
+            </div>
         </section>
 
     </section>
